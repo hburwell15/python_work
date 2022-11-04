@@ -1,0 +1,13 @@
+world = ['ireland', 'hawaii', 'tokyo', 'germany', 'czech replublic']
+print(sorted(world))
+print(world)
+print(sorted(world))
+print(world)
+world.reverse()
+print(world)
+world.reverse()
+print(world)
+print(sorted(world))
+print(sorted(world))
+world.sort(reverse=True)
+print(world)

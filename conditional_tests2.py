@@ -1,0 +1,2 @@
+friends = 'emily'
+friends == 'emily'
