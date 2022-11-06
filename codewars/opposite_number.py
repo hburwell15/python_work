@@ -1,6 +1,4 @@
-import antigravity
+def opposite(number):
+    number = 0
+   
 
-pass
-pass
-pass
-pass
