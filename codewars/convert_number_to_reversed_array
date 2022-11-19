@@ -1,6 +1,6 @@
 def digitize(n):
     new_string = str(n)
     reversed_numbers = new_string[::-1]
-    for new_list in reversed_numbers:
-        return new_list
+    
+
 digitize(34750)

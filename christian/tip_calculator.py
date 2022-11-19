@@ -18,6 +18,8 @@ def tip_calculator(bill_amount):
        tip = bill_amount * 0.20
     return tip
 
+tip_calculator(30)
+
 bill_amount = 30
 tip_amount = tip_calculator(bill_amount)
 print(bill_amount + tip_amount)
