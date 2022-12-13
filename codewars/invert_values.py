@@ -16,8 +16,3 @@ print(invert([1475938,-28347,24957,0,-44573,-2435067,0,104849]))
 def invert(lst):
     return [n*-1 for n in lst]
 print(invert([1475938,-28347,24957,0,-44573,-2435067,0,104849]))
-
-def invert(lst):
-    for l in lst:
-        return l*-1
-print(invert([1475938,-28347,24957,0,-44573,-2435067,0,104849]))
