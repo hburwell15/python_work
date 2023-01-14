@@ -23,6 +23,6 @@ numbers_to_words = {"0": "zero",
     "9": "nine",
     }
 for ch in phone:
-    translation += numbers_to_words.get(ch) + " "
+    translation += numbers_to_words.get(ch) + " " #space added so the numbers aren't right next to each other
 
 print(translation)
