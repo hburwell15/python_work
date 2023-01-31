@@ -22,24 +22,24 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 /______/______/______/______/______/______/______/______/______/______/_____ /
 *******************************************************************************
 ''')
-print("Welcome to Treasure Island.")
-print("Your mission is to find the treasure.\n")
+print("Welcome to Treasure Island!")
+print("Your mission is to find the treasure.\n\n")
 
 while game_over == False:
-  left_or_right = input('You come to a fork in the road. Do you venture left or right? Type "left" or "right"\n').lower().strip()
+  left_or_right = input('You come to a fork in the road. \nDo you venture left or right? Type "left" or "right"\n\n>>').lower().strip()
  
   if left_or_right == "left":
     while game_over == False:
-      swim_or_wait = input('\nYou walk to the shore. It\'s very foggy out on the water. \nDo you swim or wait? Type "swim" or "wait"\n').lower().strip()
+      swim_or_wait = input('\nYou walk to the shore. It\'s very foggy out on the water. \n\nDo you swim or wait? Type "swim" or "wait"\n\n>>').lower().strip()
       if swim_or_wait == "wait":
         while game_over == False:
-          cat = input('\nA small boat drifts out of the fog to the shore. Out jumps a black cat. He looks at you for a long moment. \nDo you pet or ignore? Type "pet" or "ignore"\n').lower().strip()
+          cat = input('\nA small boat drifts out of the fog to the shore. Out jumps a black cat. \nHe looks at you for a long moment. \n\nDo you pet or ignore? Type "pet" or "ignore"\n\n>>').lower().strip()
           if cat == "pet":
             while game_over == False:
-              houses = input('\nThe cat accepts your pets and gives you +1 Luck. \nYou take the boat to the island. There are 3 houses in front of you. \nDo you choose red, blue or yellow? Type "red", "blue", or "yellow"\n').lower().strip()
+              houses = input('\nThe cat accepts your pets and gives you +1 Luck. \nYou take the boat to the island. \nThere are 3 houses in front of you. \n\nDo you choose red, blue or yellow? Type "red", "blue", or "yellow"\n\n>>').lower().strip()
               if houses == "yellow":
                 game_over = True
-                print("You walk into the house to find a large chest sitting in the corner. You open it to see it's full of treasure. \nYOU WIN!")
+                print("\nYou walk into the house to find a large chest sitting in the corner. You open it to see it's full of treasure. \nYOU WIN!")
 
               elif houses == "blue":
                 game_over = True
@@ -47,13 +47,13 @@ while game_over == False:
 
               elif houses == "red":
                 game_over = True
-                print("\nYou see you've walked into a corporate business meeting. Everyone glares at you and you die from embaressment. \nGame Over.")
+                print("\nYou see you've walked into a corporate business meeting. Everyone glares at you and you die from embarrassment. \nGame Over.")
               else:
-                print("\nI do not recognize this input, please try again")
+                print("\nI do not recognize this input, please try again\n")
 
           elif cat == "ignore":
             while game_over == False:
-              houses = input('\nYou ignore the cat and get in the boat. The cat flicks its tail at you dismissivle and walks away into the fog. \nYou arrive at the island where there are 3 house. \nDo you choose red, blue or yellow? Type "red", "blue", or "yellow"\n').lower().strip()
+              houses = input('\nYou ignore the cat and get in the boat. The cat flicks its tail at you dismissively and walks away into the fog. \nYou arrive at the island where there are 3 house. \n\nDo you choose red, blue or yellow? Type "red", "blue", or "yellow"\n\n>>').lower().strip()
               if houses == "yellow":
                 game_over = True
                 print("\nYou walk into the house to find a large chest sitting in the corner. You open it to see it's full of treasure. \nYOU WIN!")
@@ -69,16 +69,16 @@ while game_over == False:
                 print("\nI do not recognize this input, please try again")
 
           else:
-            print("\nI do not recognize this input, please try again")  
+            print("\nI do not recognize this input, please try again\n")  
       elif swim_or_wait == "swim":
         game_over = True
-        print("You are sequced by sirens and drown.\nGame Over.")
+        print("\n\nYou are seduced by sirens and drown.\nGame Over.")
       else:
         print("\nI do not recognize this input, please try again.")
           
   elif left_or_right == "right":
     game_over = True
-    print("You have fallen into quicksand. \nGame Over.")
+    print("\nYou have fallen into quicksand. \nGame Over.")
   else:
-    print("\nI do not recognize this input, please try again.")
+    print("\nI do not recognize this input, please try again.\n")
      
