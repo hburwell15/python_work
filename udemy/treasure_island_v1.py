@@ -38,6 +38,7 @@ while game_over == False:
             while game_over == False:
               houses = input('\nThe cat accepts your pets and gives you +1 Luck. \nYou take the boat to the island. There are 3 houses in front of you. \nDo you choose red, blue or yellow? Type "red", "blue", or "yellow"\n').lower().strip()
               if houses == "yellow":
+                game_over = True
                 print("You walk into the house to find a large chest sitting in the corner. You open it to see it's full of treasure. \nYOU WIN!")
 
               elif houses == "blue":
@@ -54,6 +55,7 @@ while game_over == False:
             while game_over == False:
               houses = input('\nYou ignore the cat and get in the boat. The cat flicks its tail at you dismissivle and walks away into the fog. \nYou arrive at the island where there are 3 house. \nDo you choose red, blue or yellow? Type "red", "blue", or "yellow"\n').lower().strip()
               if houses == "yellow":
+                game_over = True
                 print("\nYou walk into the house to find a large chest sitting in the corner. You open it to see it's full of treasure. \nYOU WIN!")
 
               elif houses == "blue":
