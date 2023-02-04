@@ -3,6 +3,26 @@ game_over = False
 def prompt(output):
   return input(output).strip().lower()
 
+def which_house(game_over):
+  while game_over == False:
+    houses = prompt('\nThe cat accepts your pets and gives you +1 Luck. \nYou take the boat to the island. \nThere are 3 houses in front of you. \n\nDo you choose red, blue or yellow? Type "red", "blue", or "yellow"\n\n>>')
+
+    if houses == "yellow":
+      print("\nYou walk into the house to find a large chest sitting in the corner. You open it to see it's full of treasure. \nYOU WIN!")
+      return True
+
+    elif houses == "blue":
+      print("\nYou see a wizard sitting and having his afternoon tea. He immediatly turns you to ice. He was never one for unwanted visitors. \nGame Over.")
+      return True
+
+    elif houses == "red":
+      print("\nYou see you've walked into a corporate business meeting. Everyone glares at you and you die from embarrassment. \nGame Over.")
+      return True
+
+    else:
+      print("\nI do not recognize this input, please try again\n")
+
+
 print('''
 *******************************************************************************
           |                   |                  |                     |
@@ -30,7 +50,7 @@ print("Your mission is to find the treasure.\n\n")
 
 while game_over == False:
   left_or_right = prompt('You come to a fork in the road. \nDo you venture left or right? Type "left" or "right"\n\n>>')
- 
+
   if left_or_right == "left":
     while game_over == False:
       swim_or_wait = prompt('\nYou walk to the shore. It\'s very foggy out on the water. \n\nDo you swim or wait? Type "swim" or "wait"\n\n>>')
@@ -38,22 +58,7 @@ while game_over == False:
         while game_over == False:
           cat = prompt('\nA small boat drifts out of the fog to the shore. Out jumps a black cat. \nHe looks at you for a long moment. \n\nDo you pet or ignore? Type "pet" or "ignore"\n\n>>')
           if cat == "pet":
-            while game_over == False:
-              houses = prompt('\nThe cat accepts your pets and gives you +1 Luck. \nYou take the boat to the island. \nThere are 3 houses in front of you. \n\nDo you choose red, blue or yellow? Type "red", "blue", or "yellow"\n\n>>')
-              if houses == "yellow":
-                game_over = True
-                print("\nYou walk into the house to find a large chest sitting in the corner. You open it to see it's full of treasure. \nYOU WIN!")
-
-              elif houses == "blue":
-                game_over = True
-                print("\nYou see a wizard sitting and having his afternoon tea. He immediatly turns you to ice. He was never one for unwanted visitors. \nGame Over.")
-
-              elif houses == "red":
-                game_over = True
-                print("\nYou see you've walked into a corporate business meeting. Everyone glares at you and you die from embarrassment. \nGame Over.")
-
-              else:
-                print("\nI do not recognize this input, please try again\n")
+            game_over = which_house(game_over)
 
           elif cat == "ignore":
             while game_over == False:
