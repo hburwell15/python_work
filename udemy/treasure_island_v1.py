@@ -66,11 +66,11 @@ while game_over == False:
             game_over = which_house('\nYou ignore the cat and get in the boat. The cat flicks its tail at you dismissively and walks away into the fog.', game_over)
 
           else:
-            print("\nI do not recognize this input, please try again\n")  
+            print("\nI do not recognize this input, please try again\n")
 
       elif swim_or_wait == "swim":
         game_over = True
-        print("\n\nYou wade into the chilly water. Luckily you know how to swim.\nYou begin to hear a soothing melody and angelic voice singing from below the water's surface.\nYou dive down to investigate and can see nothing but the inky depths, but the voice and melody have gotten louder.\nYou swim further down and feel your chest start to burn, but you need to know what is making that beautiful sound.\nAs you vision starts to fade you see it.\n\nA mess of tenticles and eyes and mouths that emit the most beautiful music you've ever heard.\n\nYour last breath of air bubbles to the surface as you are swallowed by the lake. \n\nGAME OVER.\n")
+        print("\nYou wade into the chilly water. Luckily you know how to swim.\n\nYou begin to hear a soothing melody and angelic voice singing from below the water's surface.\nYou dive down to investigate and can see nothing but the inky depths, but the voice and melody have gotten louder.\nYou swim further down and feel your chest start to burn, but you need to know what is making that beautiful sound.\nAs you vision starts to fade you see it.\n\nA mess of tenticles and eyes and mouths that emit the most beautiful music you've ever heard.\n\nYour last breath of air bubbles to the surface as you are swallowed by the lake. \n\nGAME OVER.\n")
 
       else:
         print("\nI do not recognize this input, please try again.")
@@ -78,6 +78,9 @@ while game_over == False:
   elif left_or_right == "right":
     game_over = True
     print("\nYou confidently walk down the right path. The ground is very soft.\n\nToo soft.\n\nYour shoes sink deeper and deeper into the ground. As you struggle to move you sink faster. You realize too late that you have walked right into quicksand.\n\nGAME OVER.\n")
+
+    
+
 
   else:
     print("\nI do not recognize this input, please try again.\n")
