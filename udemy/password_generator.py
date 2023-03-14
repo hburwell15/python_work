@@ -24,7 +24,6 @@ for number in range(0, nr_numbers):
 
 print(f"Here is your password: {password}")
 
-
 #Hard level (password is randomized):
 
 password = ""
