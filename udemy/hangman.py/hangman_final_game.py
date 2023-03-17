@@ -32,7 +32,9 @@ while not end_of_game:
         guess = input("Guess a letter: \n").lower()
         if len(guess) > 1:
             print("That is not a valid input. Please try again.")
-        elif len(guess) == 1:
+        elif guess.isdigit() == True:
+            print("That is not a letter. Please guess a letter.")
+        else:
             valid_guess = True
             
         
