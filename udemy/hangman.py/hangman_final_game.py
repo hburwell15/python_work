@@ -17,7 +17,7 @@ print(logo)
 
 
 #Testing code
-# print(f'Pssst, the solution is {chosen_word}.')
+print(f'Pssst, the solution is {chosen_word}.')
 
 #Create blanks
 display = []
@@ -25,14 +25,16 @@ for _ in range(word_length):
     display += "_"
 guessed_letters = []
 
-while not end_of_game:
-    guess = input("Guess a letter: \n").lower()
-    #TODO - If the user inputs more than one letter, let them know and have them try again.
-    # multiple_letters = 
-    # while multiple_letters:
-    #     if len(guess) > 1 :
-    #         multiple_letters = True
-    #         print("That is more than one letter dumbass. Please only enter ONE letter")
+while not end_of_game: 
+    #TODO - If the user inputs more than one letter or a number, let them know and have them try again.
+    valid_guess = False
+    while not valid_guess:
+        guess = input("Guess a letter: \n").lower()
+        if len(guess) > 1:
+            print("That is not a valid input. Please try again.")
+        elif len(guess) == 1:
+            valid_guess = True
+            
         
     #TODO-4: - If the user has entered a letter they've already guessed, print the letter and let them know.
     if guess in guessed_letters:
@@ -61,7 +63,7 @@ while not end_of_game:
     #Check if user has got all letters.
     if "_" not in display:
         end_of_game = True
-        print("You win.")
+        print("\nYou win.")
 
     #TODO-2: - Import the stages from hangman_art.py and make this error go away.
     print(stages[lives])
