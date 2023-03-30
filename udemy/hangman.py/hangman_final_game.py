@@ -6,7 +6,6 @@ from hangman_art import stages
 from hangman_art import logo
 
 
-
 chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
 
@@ -28,7 +27,7 @@ while not end_of_game:
     while not valid_guess:
         guess = input("Guess a letter: \n").lower()
         if guess not in hangman_alphabet.alphabet:
-            print("That is not a invalid answer. Please guess one letter.\n")
+            print("That is not a valid answer. Please guess one letter.\n")
         else:
             valid_guess = True
             

@@ -4,7 +4,6 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
 
 print(logo)
 
-#TODO - make it so if the person types in something other than encode od decode, they get looped back to the prompt
 def caesar(starting_text, shift_amount, cypher_direction):
     end_text = ""
     if cypher_direction == "decode":
@@ -18,28 +17,38 @@ def caesar(starting_text, shift_amount, cypher_direction):
             new_position = position + shift_amount
             end_text += alphabet[new_position]
 
-    print(f"Your {cypher_direction}d text is {end_text}")
+    print(f"\nYour {cypher_direction}d text is: {end_text}")
 
 should_restart = True
-invalid_answer = True
 while should_restart:
-    while invalid_answer:
-        direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-#TODO - line 29 is always generating False. Fix this
-        if direction != "encode" or direction != "decode":
-            print("I do not understand this input. Please type encode or decode.\n")
-            invalid_answer = False
-            continue
-    text = input("Type your message:\n").lower()
-    shift = int(input("Type the shift number:\n"))
+    invalid_answer = False
+    while not invalid_answer:
+        direction = input("\nType 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+        
+        if direction != "encode":
+            if direction != "decode":
+                print("I do not understand this input.\n")
+            else:
+                invalid_answer = True
+        else:
+            invalid_answer = True
+
+    text = input("\nType your message:\n").lower()
+    shift = int(input("\nType the shift number:\n"))
     shift = shift % 26
+
     caesar(starting_text = text, shift_amount = shift, cypher_direction = direction)
-    while invalid_answer:
-        result = input("Would you like to restart the cypher program? Type 'yes' or 'no'").lower()
-        if result != "yes" or result != "no":
-            print("I do not understand this input. Please type yes or no.\n")
-            invalid_answer = False
-            continue
+
+    user_answer = False
+    while not user_answer:
+        result = input("\nWould you like to restart the cypher program? Type 'yes' or 'no'\n").lower()
+
         if result == 'no':
-            print("Goodbye")
+            print("\nGoodbye\n")
             should_restart = False
+            break
+        elif result != "yes":
+            print("I do not understand this input.\n")
+            user_answer= False
+        else:
+            user_answer= True
