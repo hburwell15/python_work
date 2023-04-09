@@ -1,6 +1,5 @@
-from replit import clear
-#HINT: You can call clear() to clear the output in the console.
-from art import logo
+import os
+from art_for_silent_auction import logo
 
 print(logo)
 
@@ -28,7 +27,7 @@ while keep_bidding:
 
   more_bidders = input("Is there anyone else who would like to bid? Type 'yes' or 'no'.\n").lower()
   if more_bidders == "yes":
-    clear()
+    os.system('clear')
   elif more_bidders == "no":
     keep_bidding = False
     find_highest_bidder(auction_bids)
